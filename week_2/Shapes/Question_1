@@ -1,0 +1,14 @@
+**Inheritance**
+
+
+All objects inherit directly or indirectly from NSObject.
+
+NSObject has many methods but only one instance variable the *isa pointer*.  Every object’s isa pointer points to the class that created it.  For example when you have  an NSString instance, that object “isa” NSString.
+
+When you send a message to an object, you start a search for a method of that name.  The search begins with the method in the object’s class.  If there is no method there, then it is on to the super class.  The hunt stops when the method is found or when the top of the hierarchy (NSObject) is reached.  
+
+ 
+**Super**
+
+
+When you override a method, you can only change its implementation.  You can’t change how it is declared; the method’s name, return type and argument types must stay the same.  However, a subclass can be built on the implementation of the superclass.  For example, if you wanted only 90% of  a method, you can use the super directive.  
