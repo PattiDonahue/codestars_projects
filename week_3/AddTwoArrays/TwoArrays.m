@@ -10,4 +10,5 @@
 
 @implementation TwoArrays
 
+NSArray *arrayByAddingObjectsFromArray;
 @end

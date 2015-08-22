@@ -7,18 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Capitalize.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         NSArray *words = @[@"cat", @"dog", @"frog"];
-        NSString *myString = [words componentsJoinedByString:@" "];
         
-        NSString *upcaseWords = [myString uppercaseString];
+        Capitalize *animals = [[Capitalize alloc]init];
         
-        NSLog(@"Question one answer - the NSArray capitalized is: %@", [upcaseWords uppercaseString]);
+        NSArray *cap = [animals capStrings:words];
+            NSLog(@"%@", cap);
         
-    }
+            }
     return 0;
 }
 

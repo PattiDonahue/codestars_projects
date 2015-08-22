@@ -9,17 +9,14 @@
 #import <Foundation/Foundation.h>
 
 int main(int argc, const char * argv[]) {
+    int i;
     @autoreleasepool {
-        NSMutableArray *myFirstArray = [NSMutableArray arrayWithObjects: @"1",@"2", @"3", nil];
-      
-       // - (void)addObjectsFromArray:(NSArray *)otherArray
         
-        [myFirstArray addObject:@"4"];
-        
-        
-        NSLog(@"%@", myFirstArray);
+        NSArray *arr1 = @[@1, @2, @3];
+        NSArray *arr2 = @[@4, @5, @6];
+        NSArray *yetAnotherArray = [arr1 arrayByAddingObjectsFromArray:arr2];
+        NSLog(@"%@", yetAnotherArray);
     }
+    
     return 0;
 }
-
-

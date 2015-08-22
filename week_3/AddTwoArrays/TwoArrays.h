@@ -10,4 +10,5 @@
 
 @interface TwoArrays : NSObject
 
+-(NSArray*)arrayByAddingObjectsFromArray;
 @end

@@ -11,14 +11,6 @@
 @interface Capitalize : NSObject
 
 
-//- (NSArray *)capitalizeStringArray:(NSArray *)array; {
-  //  // Initialize tempArray with size of array
-   // NSMutableArray *tempArray = [NSMutableArray arrayWithCapacity:array.count];
-   // for (NSString *str in array) {
-   //     [tempArray addObject:[str capitalizedString]];
-    //}
-   // return [tempArray copy]; // convert back to NSArray]
-//}
-
+-(NSArray*)capStrings:(NSArray*)words;
 
 @end
