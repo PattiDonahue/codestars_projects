@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>ADFEE882-B38D-4A5F-9CCB-C67C3B262C54</string>
+	<string>9F4DB5C7-D201-462E-8A4D-B6552F3DDBDE</string>
 	<key>IDESourceControlProjectName</key>
-	<string>NYCHighlights</string>
+	<string>CustomTableRecipes</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>18049DC4D223D133330882EB77006A83852FBDB9</key>
 		<string>https://github.com/PattiDonahue/codestars_projects.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>week_3/NYCHighlights/NYCHighlights.xcodeproj</string>
+	<string>week_4/CustomTableRecipes/CustomTableRecipes.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>18049DC4D223D133330882EB77006A83852FBDB9</key>
