@@ -1,43 +1,49 @@
 //
-//  CustomTableViewController.m
-//  TravelTheUSA
+//  ToDoListTableTableViewController.m
+//  ToDoList
 //
-//  Created by Patti Donahue on 9/2/15.
+//  Created by Patti Donahue on 9/12/15.
 //  Copyright (c) 2015 PD. All rights reserved.
 //
 
-#import "CustomTableViewController.h"
-#import "CustomTableViewCell.h"
-#import "DetailViewController.h"
+#import "ToDoListTableTableViewController.h"
+#import "ToDoItem.h"
+#import "AddToDoItemViewController.h"
 
-@interface CustomTableViewController ()
-
+@interface ToDoListTableTableViewController ()
+@property NSMutableArray *toDoItems;
 @end
 
-@implementation CustomTableViewController
-{
-    NSArray *placesToVisit;
-    NSArray *placesToVisitImages;
+@implementation ToDoListTableTableViewController
+-(void)loadInitialData {
+    ToDoItem *item1 = [[ToDoItem alloc] init];
+    item1.itemName = @"create an awesome app";
+    [self.toDoItems addObject:item1];
+    ToDoItem *item2 = [[ToDoItem alloc] init];
+    item2.itemName = @"paint the house";
+    [self.toDoItems addObject:item2];
+    ToDoItem *item3 = [[ToDoItem alloc] init];
+    item3.itemName = @"fix the driveway";
+    [self.toDoItems addObject:item3];
+
+}
+
+- (IBAction)unwindToList:(UIStoryboardSegue*)segue{
+    AddToDoItemViewController *source = [segue sourceViewController];
+    ToDoItem *item = source.toDoItem;
+    if (item !=nil) {
+        [self.toDoItems addObject:item];
+        [self.tableView reloadData];
+    }
+    
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSString *path =[[NSBundle mainBundle] pathForResource:@"places" ofType:@"plist"];
-    NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:path];
-    placesToVisitImages = [dict objectForKey:@"Image"];
-    placesToVisit =[dict objectForKey:@"Place"];
+    self.toDoItems = [[NSMutableArray alloc] init];
     
-    //placesToVisit = @[@"Boston Harbor Islands", @"Cape Cod Beach", @"Nashville", @"Grand Canyon", @"NYC Met", @"Newport", @"Amish Country"];
-    
-    //placesToVisitImages = @[@"Boston_Harbor_Islands.JPG", @"Cape_Cod_Beach.JPG", @"Nashville.jpg", @"Grand_Canyon.jpg", @"NYC_Met.JPG", @"Newport.JPG", @"Amish_Country.JPG"];
-    
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self loadInitialData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,20 +60,24 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+
     // Return the number of rows in the section.
-    return [placesToVisit count];
+    return [self.toDoItems count];
 }
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *cellIdentifier = @"Cell";
-    CustomTableViewCell *cell = (CustomTableViewCell *) [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
-    cell.placeLabel.text = [placesToVisit objectAtIndex:indexPath.row];
-    cell.thumbnailImageView.image = [UIImage imageNamed:[placesToVisitImages objectAtIndex:indexPath.row]];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ListPrototypeCell" forIndexPath:indexPath];
     
     // Configure the cell...
+    ToDoItem *toDoItem = [self.toDoItems objectAtIndex:indexPath.row];
+    cell.textLabel.text = toDoItem.itemName;
+    if (toDoItem.completed) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+    else {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
     
     return cell;
 }
@@ -107,22 +117,24 @@
 }
 */
 
-
-//#pragma mark - Navigation
+/*
+#pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
- 
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- if ([segue.identifier isEqualToString:@"showPlaceDetail"]) {
- NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
- DetailViewController *destViewController = segue.destinationViewController;destViewController.placeName = [placesToVisit objectAtIndex:indexPath.row];
- }
- }
-/*
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - Table view delegate
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    ToDoItem *tappedItem = [self.toDoItems objectAtIndex:indexPath.row];
+    tappedItem.completed = !tappedItem.completed;
+    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+    
+}
 
 @end
