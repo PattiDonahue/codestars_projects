@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>F0153422-7E35-43CD-B022-EEC95EFC0285</string>
 	<key>IDESourceControlProjectName</key>
-	<string>TableViewRecipes</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>18049DC4D223D133330882EB77006A83852FBDB9</key>
 		<string>https://github.com/PattiDonahue/codestars_projects.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>week_4/TableViewRecipes/TableViewRecipes.xcodeproj</string>
+	<string>week_4/TableViewRecipes/TableViewRecipes.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>18049DC4D223D133330882EB77006A83852FBDB9</key>
