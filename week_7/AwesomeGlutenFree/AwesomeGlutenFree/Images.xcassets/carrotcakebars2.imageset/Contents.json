@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "scale" : "1x",
+      "filename" : "carrotcakebars2.JPG"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x",
+      "filename" : "carrotcakebars2@2x.JPG"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x",
+      "filename" : "carrotcakebars2@3x.JPG"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		156C434F1BADCD4A00EF7CBF /* about.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 156C434E1BADCD4A00EF7CBF /* about.JPG */; };
 		156C43511BADCE5500EF7CBF /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = 156C43501BADCE5500EF7CBF /* about.html */; };
+		156C43541BADDD0300EF7CBF /* FavoritesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156C43531BADDD0300EF7CBF /* FavoritesCollectionViewController.m */; };
+		156C43571BADE0CC00EF7CBF /* FavoritesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 156C43561BADE0CC00EF7CBF /* FavoritesCollectionViewCell.m */; };
 		15D5D9BB1BAA519300D0134F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D5D9BA1BAA519300D0134F /* main.m */; };
 		15D5D9BE1BAA519300D0134F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D5D9BD1BAA519300D0134F /* AppDelegate.m */; };
 		15D5D9C41BAA519300D0134F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15D5D9C21BAA519300D0134F /* Main.storyboard */; };
@@ -36,6 +38,10 @@
 /* Begin PBXFileReference section */
 		156C434E1BADCD4A00EF7CBF /* about.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = about.JPG; path = ../../../../Desktop/awesomeglutenfreephotos/about.JPG; sourceTree = "<group>"; };
 		156C43501BADCE5500EF7CBF /* about.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = about.html; path = ../../../../Desktop/awesomeglutenfreephotos/about.html; sourceTree = "<group>"; };
+		156C43521BADDD0300EF7CBF /* FavoritesCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesCollectionViewController.h; sourceTree = "<group>"; };
+		156C43531BADDD0300EF7CBF /* FavoritesCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesCollectionViewController.m; sourceTree = "<group>"; };
+		156C43551BADE0CC00EF7CBF /* FavoritesCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesCollectionViewCell.h; sourceTree = "<group>"; };
+		156C43561BADE0CC00EF7CBF /* FavoritesCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesCollectionViewCell.m; sourceTree = "<group>"; };
 		15D5D9B51BAA519300D0134F /* AwesomeGlutenFree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AwesomeGlutenFree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15D5D9B91BAA519300D0134F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15D5D9BA1BAA519300D0134F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -118,6 +124,10 @@
 				15E4E2C01BACE96D00F48C47 /* GFRecipe.m */,
 				15E4E2C21BAD0A0B00F48C47 /* Recipe.h */,
 				15E4E2C31BAD0A0B00F48C47 /* Recipe.m */,
+				156C43521BADDD0300EF7CBF /* FavoritesCollectionViewController.h */,
+				156C43531BADDD0300EF7CBF /* FavoritesCollectionViewController.m */,
+				156C43551BADE0CC00EF7CBF /* FavoritesCollectionViewCell.h */,
+				156C43561BADE0CC00EF7CBF /* FavoritesCollectionViewCell.m */,
 			);
 			path = AwesomeGlutenFree;
 			sourceTree = "<group>";
@@ -252,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				156C43571BADE0CC00EF7CBF /* FavoritesCollectionViewCell.m in Sources */,
 				15E4E2C11BACE96D00F48C47 /* GFRecipe.m in Sources */,
 				15E4E2BA1BACA12900F48C47 /* AboutViewController.m in Sources */,
 				15D5D9E61BAC7A5B00D0134F /* DetailViewController.m in Sources */,
@@ -259,6 +270,7 @@
 				15D5D9BE1BAA519300D0134F /* AppDelegate.m in Sources */,
 				15D5D9E01BAA52AA00D0134F /* CustomTableViewController.m in Sources */,
 				15D5D9E31BAB224100D0134F /* CustomTableViewCell.m in Sources */,
+				156C43541BADDD0300EF7CBF /* FavoritesCollectionViewController.m in Sources */,
 				15D5D9BB1BAA519300D0134F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
