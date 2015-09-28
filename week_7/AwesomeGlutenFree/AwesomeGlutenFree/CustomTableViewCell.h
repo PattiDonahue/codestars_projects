@@ -10,8 +10,10 @@
 
 @interface CustomTableViewCell : UITableViewCell
 
-@property (nonatomic, weak) IBOutlet UILabel *gfRecipeNameLabel;
+@property (nonatomic, weak) IBOutlet UILabel *nameLabel;
 @property (nonatomic, weak) IBOutlet UIImageView *thumbnailImageView;
 
 
 @end
+
+

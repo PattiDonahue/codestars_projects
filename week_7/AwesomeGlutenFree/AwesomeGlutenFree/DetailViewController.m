@@ -17,17 +17,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // set label text with recipe name.
-    //self.gfRecipeLabel.text = self.gfRecipeName;
+  
     self.title = self.recipe.name;
     self.recipeImageView.image = [UIImage imageNamed:self.recipe.image];
     NSMutableString *ingredientsTextView = [NSMutableString string];
     for (NSString* ingredient in self.recipe.ingredients) {
         [ingredientsTextView appendFormat:@"%@\n", ingredient];
     }
-        self.ingredientsTextView.text = ingredientsTextView;
-    
-}
+    self.ingredientsTextView.text = ingredientsTextView;
 
+    
+    NSMutableString *directionsTextView = [NSMutableString string];
+    for (NSString* direction in self.recipe.directions) {
+      [ingredientsTextView appendFormat:@"%@\n", direction];
+    }
+    
+    self.directionsTextView.text = directionsTextView;
+    }
+
+//}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -5,7 +5,7 @@
 #import "CustomTableViewController.h"
 #import "CustomTableViewCell.h"
 #import "DetailViewController.h"
-#import "Recipe.h"
+//#import "Recipe.h"
 
 @interface CustomTableViewController ()
 
@@ -27,9 +27,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    searchController.searchResultsUpdater = self;
-    searchController.dimsBackgroundDuringPresentation = NO;
     
     // Initialize the recipes array
     Recipe *recipe1 = [Recipe new];
@@ -130,15 +127,14 @@
     
     recipes = [NSArray arrayWithObjects:recipe1, recipe2, recipe3, recipe4, recipe5, recipe6, recipe7, recipe8, recipe9, recipe10, recipe11, recipe12, recipe13, recipe14, recipe15, recipe16, nil];
     
-    searchController.searchResultsUpdater = self;
-    searchController.dimsBackgroundDuringPresentation = NO;
-    
     searchController = [[UISearchController alloc]
                                             initWithSearchResultsController:nil];
     [searchController.searchBar sizeToFit];
     self.tableView.tableHeaderView = searchController.searchBar;
     self.definesPresentationContext = YES;
     
+    searchController.searchResultsUpdater = self;
+    searchController.dimsBackgroundDuringPresentation = NO;
     
     //recipeNames = @[@"Egg Benedict", @"Mushroom Risotto", @"Full Breakfast", @"Hamburger", @"Ham and Egg Sandwich", @"Creme Brelee", @"White Chocolate Donut", @"Starbucks Coffee", @"Vegetable Curry", @"Instant Noodle with Egg", @"Noodle with BBQ Pork", @"Japanese Noodle with Pork", @"Green Tea", @"Thai Shrimp Cake", @"Angry Birds Cake", @"Ham and Cheese Panini"];
     
@@ -201,9 +197,10 @@
     return cell;
 }
 
-- (void) updateSearchResultsForSearchController:(UISearchController *)searchController {
-    [self filterContentForSearchText searchController.searchBar.text];
-}  [self.tableView reloadData];
+- (void) updateSearchResultsForSearchController:(UISearchController *)aSearchController {
+    [self filterContentForSearchText:searchController.searchBar.text];
+    [self.tableView reloadData];
+}
 
 //#pragma mark - Navigation
 

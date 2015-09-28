@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		153452EB1BB8C7EA00A36B2F /* agf_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 153452EA1BB8C7EA00A36B2F /* agf_logo.png */; };
+		153452ED1BB8D16200A36B2F /* agf_desserts_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 153452EC1BB8D16200A36B2F /* agf_desserts_logo.png */; };
+		153452EF1BB8D2E400A36B2F /* agflogo4.png in Resources */ = {isa = PBXBuildFile; fileRef = 153452EE1BB8D2E400A36B2F /* agflogo4.png */; };
 		156C434F1BADCD4A00EF7CBF /* about.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 156C434E1BADCD4A00EF7CBF /* about.JPG */; };
 		156C43511BADCE5500EF7CBF /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = 156C43501BADCE5500EF7CBF /* about.html */; };
 		156C43541BADDD0300EF7CBF /* FavoritesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156C43531BADDD0300EF7CBF /* FavoritesCollectionViewController.m */; };
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		153452EA1BB8C7EA00A36B2F /* agf_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = agf_logo.png; path = ../../../../Desktop/awesomeglutenfreephotos/logos/agf_logo.png; sourceTree = "<group>"; };
+		153452EC1BB8D16200A36B2F /* agf_desserts_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = agf_desserts_logo.png; path = ../../../../Desktop/awesomeglutenfreephotos/logos/agf_desserts_logo.png; sourceTree = "<group>"; };
+		153452EE1BB8D2E400A36B2F /* agflogo4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = agflogo4.png; path = ../../../../Desktop/awesomeglutenfreephotos/logos/agflogo4.png; sourceTree = "<group>"; };
 		156C434E1BADCD4A00EF7CBF /* about.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = about.JPG; path = ../../../../Desktop/awesomeglutenfreephotos/about.JPG; sourceTree = "<group>"; };
 		156C43501BADCE5500EF7CBF /* about.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = about.html; path = ../../../../Desktop/awesomeglutenfreephotos/about.html; sourceTree = "<group>"; };
 		156C43521BADDD0300EF7CBF /* FavoritesCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesCollectionViewController.h; sourceTree = "<group>"; };
@@ -136,6 +142,9 @@
 			isa = PBXGroup;
 			children = (
 				156C43501BADCE5500EF7CBF /* about.html */,
+				153452EE1BB8D2E400A36B2F /* agflogo4.png */,
+				153452EC1BB8D16200A36B2F /* agf_desserts_logo.png */,
+				153452EA1BB8C7EA00A36B2F /* agf_logo.png */,
 				156C434E1BADCD4A00EF7CBF /* about.JPG */,
 				15D5D9B91BAA519300D0134F /* Info.plist */,
 				15D5D9BA1BAA519300D0134F /* main.m */,
@@ -241,9 +250,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				15D5D9C41BAA519300D0134F /* Main.storyboard in Resources */,
+				153452EB1BB8C7EA00A36B2F /* agf_logo.png in Resources */,
+				153452EF1BB8D2E400A36B2F /* agflogo4.png in Resources */,
 				15D5D9C91BAA519300D0134F /* LaunchScreen.xib in Resources */,
 				156C434F1BADCD4A00EF7CBF /* about.JPG in Resources */,
 				156C43511BADCE5500EF7CBF /* about.html in Resources */,
+				153452ED1BB8D16200A36B2F /* agf_desserts_logo.png in Resources */,
 				15D5D9C61BAA519300D0134F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

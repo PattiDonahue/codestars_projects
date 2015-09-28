@@ -11,12 +11,9 @@
 
 @interface DetailViewController : UIViewController
 
-//@property (nonatomic, strong) IBOutlet UILabel *gfRecipeLabel;
-//@property (nonatomic, strong) NSString *gfRecipeName;
-
-//@property (weak, nonatomic) IBOutlet UILabel *ingredientsTextView;
 @property (weak, nonatomic) IBOutlet UIImageView *recipeImageView;
 @property (weak, nonatomic) IBOutlet UITextView *ingredientsTextView;
+@property (weak, nonatomic) IBOutlet UITextView *directionsTextView;
 
 @property (nonatomic, strong) Recipe *recipe;
 @end

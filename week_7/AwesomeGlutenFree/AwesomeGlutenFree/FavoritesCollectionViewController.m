@@ -30,7 +30,7 @@ static NSString * const reuseIdentifier = @"Cell";
     
     // Do any additional setup after loading the view.
     
-    favoriteImages = @[@"Cupcake.JPG", @"carrotcakebars2.JPG"];
+    favoriteImages = @[@"ChocolateMountain.jpg", @"Cupcake.JPG", @"sodabread2.JPG", @"carrotcakebars2.JPG", @"icecreampie.JPG", @"spinachshells.JPG", @"stuffedpeppers.JPG", @"vegetable_tuna_casserole.JPG", @"chocolatechipcookies.JPG", @"lemonbars.JPG", @"chocsugarcookies.JPG", @"berrycrisp.JPG"];
 }
 
 - (void)didReceiveMemoryWarning {

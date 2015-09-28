@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "scale" : "1x",
+      "filename" : "stuffedpeppers.JPG"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x",
+      "filename" : "stuffedpeppers@2x.JPG"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x",
+      "filename" : "stuffedpeppers@3x.JPG"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

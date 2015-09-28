@@ -10,6 +10,8 @@
 
 @interface Recipe : NSObject
 @property (nonatomic, strong) NSString *name; //name of recipe
+
 @property (nonatomic, strong) NSString *image; //name of recipe image
 @property (nonatomic, strong) NSArray *ingredients;
+@property (nonatomic, strong) NSArray *directions;
 @end

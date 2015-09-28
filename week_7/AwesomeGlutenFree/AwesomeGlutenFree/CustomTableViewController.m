@@ -11,9 +11,6 @@
 #import "DetailViewController.h"
 #import "Recipe.h"
 
-//#import "GFRecipe.h"
-
-
 
 @interface CustomTableViewController ()
 
@@ -24,14 +21,10 @@
 
 {
     NSArray *recipes;
-    //NSArray *searchResults;
-    //UISearchController *searchController;
+    NSArray *searchResults;
+    UISearchController *searchController;
 }
 
-//{
-  //  NSArray *gfRecipeNames;
-  //  NSArray *gfRecipeImages;
-//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -40,49 +33,61 @@
     Recipe *recipe1 = [Recipe new];
     recipe1.name = @"Chocolate Sugar Cookies";
     recipe1.image = @"chocsugarcookies.JPG";
-    recipe1.ingredients = [NSArray arrayWithObjects:@"2 cups of gluten free flour (Better Batter is great)", @"1 tsp baking soda", @"1/4 tsp. salt", @"1 cup butter (2 sticks)", @"1 cup sugar", @"1 tsp. vanilla (McCormick)", @"1 egg",@"3 squares unsweetened chocolate (Baker's)", nil];
+    recipe1.ingredients = [NSArray arrayWithObjects:@"2 cups of gluten free flour (Better Batter or Arrowhead Mills)", @"1 tsp baking soda", @"1/4 tsp. salt", @"1 cup butter (2 sticks)", @"1 cup sugar", @"1 tsp. vanilla (McCormick)", @"1 egg",@"3 squares unsweetened chocolate (Baker's)", @"1 tsp. xanthan gum (Bob's Red Mill)", @"additional sugar", @"Melt chocolate and butter. Stir in sugar, egg and vanilla. Mix in gluten free flour, baking soda, xanthan gum and salt. The xanthan gum adds elasticity to the cookies. Refrigerate for 30 min.  Preheat oven to 350 degrees. Then shape dough into 1 in. balls, roll in the additional sugar, then place them 2 in. apart on the parchment paper that has been placed on your cookie sheet.  Flatten them lightly.  Bake 10 minutes at 350 degrees F.  Let them cool slightly before moving them.", nil];
+
     
     Recipe *recipe2 = [Recipe new];
     recipe2.name = @"Oatmeal Craisin Cookies";
     recipe2.image = @"oatmealcookies.JPG";
-    recipe2.ingredients = [NSArray arrayWithObjects:@"1 1/2 cups of gluten free flour (Better Batter is great)", @"1 tsp baking soda", @"1/2 tsp. salt", @"1 cup butter (2 sticks)", @"1 cup brown sugar", @"1/2 cup sugar", @"1 tsp. vanilla (McCormick)", @"2 eggs",@"3 cups Bob's Red Mill Oatmeal", @"1 cup raisins", @"1 cup craisins (Ocean Spray)", @"1 tsp. cinnamon", nil];
+    recipe2.ingredients = [NSArray arrayWithObjects:@"1 1/2 cups of gluten free flour (Better Batter or Arrowhead Mills)", @"1 tsp baking soda", @"1/2 tsp. salt", @"1 cup butter (2 sticks)", @"1 cup brown sugar", @"1/2 cup sugar", @"1 tsp. vanilla (McCormick)", @"2 eggs",@"3 cups gluten free oatmeal(Bob's Red Mill)", @"1 cup raisins", @"1 cup craisins (Ocean Spray)", @"1 tsp. cinnamon", @"1 tsp. xanthan gum (Bob's Red Mill)", @"Preheat oven to 350 degrees F. Melt butter and add sugars, eggs, and vanilla and mix well in a large bowl.  Combine the gluten free flour, gluten free oatmeal, baking soda, cinnamon, salt, xanthan gum, raisins and craisins and mix well. Shape into balls, then place them 2 in. apart on the parchment paper that has been placed on your cookie sheet.  Flatten them lightly.  Bake 10 minutes at 350 degrees F.  Let them cool slightly before moving them.", nil];
+    
     
     Recipe *recipe3 = [Recipe new];
     recipe3.name = @"Chocolate Mountain";
     recipe3.image = @"ChocolateMountain.jpg";
-    recipe3.ingredients = [NSArray arrayWithObjects:@"2 cups of gluten free flour (Better Batter is great)", nil];
+    recipe3.ingredients = [NSArray arrayWithObjects:@"Gluten free chocolate cake mix (King Arthur)", @"2 instant chocolate pudding mixes (Jello)", @"1 pint heavy cream", @"See cake mix and chocolate pudding for other ingredients", @"Make 2 - 8 or 9 in chocolate cakes, then make the chocolate pudding. Whip heavy cream with mixer and 2 tsp. sugar and 1 tsp. vanilla until it is stiff.  Use a large clear pyrex bowl if possible to layer chocolate cake, 1/2 the chocolate pudding, 1/2 the heavy cream, then duplicate, another chocolate cake, rest of chocolate pudding and rest of heavy cream.", nil];
+
     
     Recipe *recipe4 = [Recipe new];
-    recipe4.name = @"Lemon Bars";
+    recipe4.name = @"Lemon Bars by Rebecca Reilly";
     recipe4.image = @"lemonbars.JPG";
-    recipe4.ingredients = [NSArray arrayWithObjects:@"2 cups of gluten free flour (Better Batter is great)", nil];
+    recipe4.ingredients = [NSArray arrayWithObjects:@"1 cup of gluten free flour (Better Batter)", @"1/2 cup gluten free almond flour", @"1/3 cup confectioners' sugar", @" 1/4 tsp. xanthan gum (Bob's Red Mill)", @"1/8 tsp. of salt", @"1 stick of butter", @"3 eggs", @"1 1/2 cups sugar", @"1/3 cup fresh lemon juice", @"confectioners' sugar for dusting", @"Preheat oven to 325 degrees F.  Lightly grease 8 in. square pan. Make the crust by mixing the gluten free flour, gluten free almond flour, confectioners'sugar, xanthan gum, salt and slightly melted butter. Press the mixture into lightly greased 8 in. square pan and bake for 20 minutes.  Make the filling by beating the eggs and sugars together.  Add the lemon juice.  Pour this filling over the hot crust and bake for 20 more minutes.  Cool then dust with confectioners' sugar and cut into squares.", nil];
+    
     
     Recipe *recipe5 = [Recipe new];
     recipe5.name = @"Chocolate Chip Cookies";
-    recipe5.image = @"ChocChipCookies_w.jpg";
-    recipe5.ingredients = [NSArray arrayWithObjects:@"2 1/4 cups of gluten free flour (Better Batter is great)", @"1 tsp baking powder", @"1 tsp. salt", @"1 cup butter (2 sticks)",@"3/4 cup sugar", @"3/4 brown sugar", @" 1 tsp. vanilla (McCormick)", @"2 eggs",@"2 cups  semi-sweet chocolate chips (Nestle Toll House)", nil];
+    recipe5.image = @"chocolatechipcookies.jpg";
+    recipe5.ingredients = [NSArray arrayWithObjects:@"2 cups of gluten free flour (Better Batter)", @"1 tsp baking soda", @"1 tsp. salt", @"1 cup butter (2 sticks)", @"3/4 cup sugar", @"3/4 brown sugar", @" 1 tsp. vanilla (McCormick)", @"2 eggs",@"2 cups semi-sweet chocolate chips (Nestle Toll House)", @"1 tsp. xanthan gum (Bob's red Mill)", @"Mix flour, baking soda, salt, xanthan gum.  Then in a larger bowl mix melted butter, sugars, vanilla and eggs.  Add in the flour mixture and the chocolate chips.  Shape into balls, then place them 2 in. apart on the parchment paper that has been placed on your cookie sheet.  Flatten them slightly.  Bake 10 minutes at 350 degrees F.  Let them cool slightly before moving them.",  nil];
+    
+    
+    Recipe *recipe6 = [Recipe new];
+    recipe6.name = @"Carrot Cake Bars";
+    recipe6.image = @"carrotcakebars2.jpg";
+    recipe6.ingredients = [NSArray arrayWithObjects:@"1 1/2 cups gluten free flour (Better Batter)", @"1/4 cup cornstarch", @"2/3 cup flour", @" 2 tsp. baking soda", @"1 tsp. cinnamon", @"1/2 tsp. nutmeg", @"1/2 tsp. salt", @"3/4 cup applesauce", @"1/2 cup vegetable oil", @"3 eggs", @"3 cups grated carrots", @"1/2 cup butter", @"8 oz. cream cheese (Philadelphia)", @"2-3 cups confectioners' sugar", @"1 tsp. vanilla extract", @"Preheat oven to 350 degrees F. Lightly grease 8 in. square pan. Combine gluten free flour, cornstarch, sugar, baking soda, cinnamon, nutmeg and salt.  In a smaller bowl combine applesauce, oil and eggs.  Combine both bowls, mix well and add the grated carrots.  Pour the batter into the pan.  Bake for 70 minutes at 350 degrees F.  Cool completely.  To make cream cheese icing, mix 1 stick of butter (room temperature) and 8 oz. of cream cheese (room temperature), then add the powdwered sugar and vanilla extract.  Spread over the carrot cake bars and then cut into squares.",  nil];
+    
+    Recipe *recipe7 = [Recipe new];
+    recipe7.name = @"Cheesecake";
+    recipe7.image = @"cheesecake2.JPG";
+    recipe7.ingredients = [NSArray arrayWithObjects:@"gluten free graham crackers (Kinnikinnick)", @"1/4 cup sugar", @"6 tblsp. melted butter", @"5 - 8 oz. packages of cream cheese (Philadelphia)", @"1 3/4 cup sugar", @"3 tblsp. gluten free flour", @"1/4 tsp. salt", @"5 eggs", @"2 egg yolks", @" 2 tblsp. milk", @"Preheat oven to 475 degree F. Leave cream cheese out on table to soften, while making crust.  Grease bottom of 10 in. springform pan and dust with glutenfree flour. Crumble graham crackers in a chopper or blender then mix with 1/4 cup sugar and melted butter.  Press into bottom of springform pan for crust.  Place in refrigerator until filling is ready.  Beat softened cream cheese in a large bowl, add sugar, gluten free flour, salt, eggs and milk.  Pour cream cheese filling into springform pan.  Then place  cream cheese cake in oven at 475 degrees F. for 10 min.  Lower the temperature to 300 degrees F. for 50 minutes more.  Turn off the oven.  Don't open the door.  Leave cheesecake in the oven for another 15-20 minutes.  Then take it out and place on wire rack so it cools down slowly, then refrigerate.", nil];
+    
+    Recipe *recipe8 = [Recipe new];
+    recipe8.name = @"Berry Crisp";
+    recipe8.image = @"berrycrisp.JPG";
+    recipe8.ingredients = [NSArray arrayWithObjects:@"4 cups of mixed berries", @"2 tblsp. cornstarch", @"1/2 cup gluten free flour", @"1/2 cup gluten free oatmeal (Bob's Red Mill)", @"1/4 cup sugar", @"1/4 cup melted butter", @" 1 tsp. cinnamon", @"Wash and pour mixed berries with cornstarch into baking dish.  Mix gluten free flour, oatmeal, sugarbutter and cinnamon.  Sprinkle this topping over the berries.  Bake in the oven for 30 min. at 350 degrees F.", nil];
+    
 
-    
-    recipes = [NSArray arrayWithObjects:recipe1, recipe2, recipe3, recipe4, recipe5, nil];
-    
-    
-   // searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
-   // [searchController.searchBar sizeToFit];
-   // self.tableView.tableHeadUISearchController *searchController:erView = searchController.searchBar;
-   // self.definesPresentationContext = YES;
+    recipes = [NSArray arrayWithObjects:recipe1, recipe2, recipe3, recipe4, recipe5, recipe6, recipe7, recipe8, nil];
     
     
+    searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
+    [searchController.searchBar sizeToFit];
+    self.tableView.tableHeaderView = searchController.searchBar;
+    self.definesPresentationContext = YES;
     
-    //gfRecipeNames = @[@"Chocolate Sugar Cookies", @"Oatmeal Craisin Cookies", @"Chocolate Mountain",];
-                      //@"Chocolate Chip Cookies",  @"Brownies", @"Carrot Cake", @"Irish Soda Bread", @"Lemon Bars", @"Tiramisu", @"Ice Cream Cake", @"Cheesecake", @"Banana Bread", @"Blueberry Muffins", @"Cupcakes", @"Pumpkin Pie", @"Berry Crumble"];
+    searchController.searchResultsUpdater = self;
+    searchController.dimsBackgroundDuringPresentation = NO;
     
-    //gfRecipeImages = @[@"chocsugarcookies.JPG", @"oatmealcookies.JPG", @"ChocolateMountain.jpg"];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+ 
 }
 
 - (void)didReceiveMemoryWarning {
@@ -97,36 +102,62 @@
     return 1;
 }
 
+//search results only be displayed when search controller is active so when user taps search field active property set to True
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (searchController.active){
+        return searchResults.count;
+} else {
     return [recipes count];
+
     // Return the number of rows in the section.
     //return 0;
 }
-
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"Cell";
-    CustomTableViewCell *cell = (CustomTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    //configure the cell...
-    if (cell == nil) {
-        cell=[[CustomTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                    reuseIdentifier:CellIdentifier];
-    }
-    // Display recipe in the table cell
-    
-    //cell.gfRecipeNameLabel.text = [gfRecipeNames objectAtIndex:indexPath.row];
-    //cell.thumbnailImageView.image = [UIImage imageNamed:[gfRecipeImages objectAtIndex:indexPath.row ]];
-    
-    // Configure the cell...
-    
-    Recipe *recipe = [recipes objectAtIndex:indexPath.row];
-    cell.gfRecipeNameLabel.text = recipe.name;
-    cell.thumbnailImageView.image = [UIImage imageNamed:recipe.image];
-    
-    return cell;
 }
 
+//when search controller is active return search results when inactive return count of full recipe list
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+    {
+    static NSString *cellIdentifier = @"Cell";
+    CustomTableViewCell *cell = (CustomTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    Recipe *recipe;
+    if (searchController.active){
+        recipe = [searchResults objectAtIndex:indexPath.row];
+    } else {
+        recipe = [recipes objectAtIndex:indexPath.row];
+    }
+    
+    //configure the cell...
+    //if (cell == nil) {
+    //    cell=[[CustomTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+      //                              reuseIdentifier:CellIdentifier];
+    
+    cell.nameLabel.text = recipe.name;
+    cell.thumbnailImageView.image = [UIImage imageNamed:recipe.image];
+  
+    return cell;
+    
+    }
+
+
+//UISearchRsultsUpdating protocol defines method updateSearcResultsForSearchController updates when user makes changes in search bar
+-(void) updateSearchResultsForSearchController:(UISearchController *)asearchController {
+    
+    //pass it to filterContentForSearchText method
+    [self filterContentForSearchText:searchController.searchBar.text];
+    
+    //reload table data
+    [self.tableView reloadData];
+}
+
+
+//new method for content filtering NSPredicate name contains [c] - the c means comparison is case sensitive
+-(void)filterContentForSearchText:(NSString *)searchText {
+    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"name contains[c] %@", searchText];
+    
+    //with predicate defined filterArrayUsingPredicate returns new array containign objecst that match predicate  
+        searchResults = [recipes filteredArrayUsingPredicate:resultPredicate];
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -175,10 +206,21 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         DetailViewController *destViewController = segue.destinationViewController;
         //destViewController.gfRecipeName = [gfRecipeNames objectAtIndex:indexPath.row];
-        Recipe *recipe = [recipes objectAtIndex:indexPath.row];
-            destViewController.recipe=recipe;
+        
+        
+        Recipe *recipe;
+        if (searchController.active) {
+          recipe = [searchResults objectAtIndex:indexPath.row];
+        } else {
+           recipe = [recipes objectAtIndex:indexPath.row];
+        }
+       destViewController.recipe = recipe;
     }
-}
 
+        //Recipe *recipe = [recipes objectAtIndex:indexPath.row];
+            //destViewController.recipe=recipe;
+    //}
+
+                                    }
 
 @end
