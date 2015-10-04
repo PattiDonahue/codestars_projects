@@ -23,6 +23,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    if (self.selectedRecipe) {
+        self.nameTextField.text = self.selectedRecipe.name;
+        self.imageTextField.text = self.selectedRecipe.image;
+        self.prepTimeTextField.text = self.selectedRecipe.prepTime;
+    }
    }
 
 - (void)didReceiveMemoryWarning {
@@ -51,10 +56,16 @@
 - (IBAction)save:(id)sender {
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     NSManagedObjectContext *managedObjectContext = [appDelegate managedObjectContext];
- 
+    if (self.selectedRecipe) {
+        recipe = self.selectedRecipe;
+    } else {
+        recipe = (Recipe *)[NSEntityDescription insertNewObjectForEntityForName:@"Recipe"inManagedObjectContext:managedObjectContext];
+    }
     //to use CoreData Framework the model objects should be instances of NSManagedObject and Recipe is a subclass or NSManagedObject
     //to create new instance of NSManagedObject we use insertNewObjectForEntity method then save it
-    recipe = (Recipe *) [NSEntityDescription insertNewObjectForEntityForName:@"Recipe" inManagedObjectContext:managedObjectContext];
+    
+    //recipe = (Recipe *) [NSEntityDescription insertNewObjectForEntityForName:@"Recipe" inManagedObjectContext:managedObjectContext];
+    
     recipe.name = self.nameTextField.text;
     recipe.image = self.imageTextField.text;
     recipe.prepTime = self.prepTimeTextField.text;

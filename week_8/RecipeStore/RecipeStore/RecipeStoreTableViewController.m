@@ -9,6 +9,7 @@
 #import "RecipeStoreTableViewController.h"
 #import "AppDelegate.h"
 #import "Recipe.h"
+#import "AddRecipeViewController.h"
 
 @interface RecipeStoreTableViewController ()
 //@interface AddRecipeViewController ()
@@ -41,6 +42,7 @@
         } else {
             NSLog(@"Can't get the record! %@ %@", error, [error localizedDescription]);
             //when done we get array of Recipe objects by accessing the fetchedObjects property
+            
         }
     }
 }
@@ -174,14 +176,21 @@ recipes = controller.fetchedObjects;
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
+//In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"UpdateRecipe"]) {
+        Recipe *selectedRecipe = [recipes objectAtIndex:[[self.tableView indexPathForSelectedRow]row]];
+        UINavigationController *destViewController = segue.destinationViewController;
+        AddRecipeViewController *recipeViewController = (AddRecipeViewController*)destViewController.topViewController;
+        recipeViewController.selectedRecipe = selectedRecipe;
+    }
+
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 @end
