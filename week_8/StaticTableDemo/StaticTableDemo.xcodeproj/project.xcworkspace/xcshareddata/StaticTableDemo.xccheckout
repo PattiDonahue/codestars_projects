@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>34A7DA2C-7F02-4030-9546-662F5E87702F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>18049DC4D223D133330882EB77006A83852FBDB9</key>
+		<string>https://github.com/PattiDonahue/codestars_projects.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>week_8/StaticTableDemo/StaticTableDemo.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>18049DC4D223D133330882EB77006A83852FBDB9</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/PattiDonahue/codestars_projects.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>18049DC4D223D133330882EB77006A83852FBDB9</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>18049DC4D223D133330882EB77006A83852FBDB9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>codestars_projects</string>
+		</dict>
+	</array>
+</dict>
+</plist>
