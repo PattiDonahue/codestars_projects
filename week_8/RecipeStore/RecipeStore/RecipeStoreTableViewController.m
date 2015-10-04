@@ -115,6 +115,31 @@ recipes = controller.fetchedObjects;
 -(void) controllerDidChangeContent:(NSFetchedResultsController *)controller {[self.tableView endUpdates];
 
 }
+
+//to delete a manged object
+//first grab managed object context then retrieve recipe for deletion
+- (BOOL)tableview:(UITableView *) tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //return NO if you do not want the specified item to be editable.
+    return YES;
+}
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //delete the row from the data source
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    NSManagedObjectContext *managedObjectContext = [appDelegate managedObjectContext];
+    
+    if (managedObjectContext != nil){
+        Recipe *recipeToDelete = (Recipe *)[fetchResultController objectAtIndexPath:indexPath];
+        [managedObjectContext deleteObject:recipeToDelete];
+        
+        NSError *error;
+        if (![managedObjectContext save:&error]) {
+            NSLog(@"Can't delete the record! %@ %@", error,[error localizedDescription]);
+        }
+    }
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
